@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Groove '66",
+    "slug": "groove66",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.devqii.groove66",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "backgroundColor": "#F6EFD9"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      "expo-font",
+      "expo-splash-screen",
+      "expo-audio"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2df57046-11ec-4877-b483-1591495a2ec6"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "android/src/main/java/expo/modules/audio/AudioModule.kt": {
+    "before": "637fe9bed875e47c3348a1f9623c4e049965efec2ebbe77cff6836c94544177a",
+    "after": "b72ca5ffe8235a34e33d50d200f4bd5b28048dc4f0e12adcdbd5e9f158ba5439"
+  },
+  "android/src/main/java/expo/modules/audio/AudioPlayer.kt": {
+    "before": "636f4ef70dac17d7490ec5e99aa60d71dc7ce6d7b4b913c501001079d6b8f33e",
+    "after": "92ad9d175b85a8e6137ad942ad04d1f9363bc5030531d7902790a3269f9a7774"
+  },
+  "src/AudioModule.types.ts": {
+    "before": "fc581e960ba8ab5f9085abd3119caa30f2b48c25334a898944ca25025af9bc13",
+    "after": "8606c276e6590b08a5a7f91747581c69a63cd4b10bebfea3ad2667c09c4326fb"
+  },
+  "src/Audio.types.ts": {
+    "before": "d5782c755dcdf2164a15ee48b2ad250f42aa69198d5419555928e52295300dce",
+    "after": "3af2541ac259168b234bfb2e03b4a4ca4a13f552ded0600c4b12a9ea2bb5526b"
+  },
+  "build/AudioModule.types.d.ts": {
+    "before": "a9a11ff056e9577525f0663ccdc6a4155ecbd98b48a0dd666b2eea7768cf959c",
+    "after": "5d4e2a808ed0296b0fb9696ecbd2a074f6e3af36dbeacab9baeb1da53308d69e"
+  },
+  "build/Audio.types.d.ts": {
+    "before": "6897beb1ea651abe608d291a8c1c726d8b025459f6673d21fc965c48ce2bf174",
+    "after": "44ce5164876eb5223193e7790db6449ab164f6f312af7878f5d51c558c282b02"
+  }
+}

@@ -1,0 +1,68 @@
+--- a/node_modules/expo-audio/android/src/main/java/expo/modules/audio/AudioModule.kt
++++ b/node_modules/expo-audio/android/src/main/java/expo/modules/audio/AudioModule.kt
+@@ -376,6 +376,12 @@
+         player.id
+       }
+ 
++      Property("audioSessionId") { player ->
++        runOnMain {
++          player.ref.audioSessionId
++        }
++      }
++
+       Property("isBuffering") { player ->
+         runOnMain {
+           player.ref.playbackState == Player.STATE_BUFFERING
+--- a/node_modules/expo-audio/android/src/main/java/expo/modules/audio/AudioPlayer.kt
++++ b/node_modules/expo-audio/android/src/main/java/expo/modules/audio/AudioPlayer.kt
+@@ -200,6 +200,7 @@
+ 
+     return mapOf(
+       "id" to id,
++      "audioSessionId" to ref.audioSessionId,
+       "currentTime" to currentTime,
+       "playbackState" to playbackStateToString(ref.playbackState),
+       "timeControlStatus" to if (playingStatus) "playing" else "paused",
+--- a/node_modules/expo-audio/src/AudioModule.types.ts
++++ b/node_modules/expo-audio/src/AudioModule.types.ts
+@@ -55,6 +55,7 @@
+    * Unique identifier for the player object.
+    */
+   id: string;
++  audioSessionId?: number;
+ 
+   /**
+    * Boolean value indicating whether the player is currently playing.
+--- a/node_modules/expo-audio/src/Audio.types.ts
++++ b/node_modules/expo-audio/src/Audio.types.ts
+@@ -200,6 +200,8 @@
+  * Used by `useAudioPlayerStatus()` to provide real-time status updates.
+  */
+ export type AudioStatus = {
++  /** Android ExoPlayer session; unavailable on other platforms. */
++  audioSessionId?: number;
+   /** Unique identifier for the player instance. */
+   id: string;
+   /** Current playback position in seconds. */
+--- a/node_modules/expo-audio/build/AudioModule.types.d.ts
++++ b/node_modules/expo-audio/build/AudioModule.types.d.ts
+@@ -129,6 +129,8 @@
+      * @hidden
+      */
+     currentStatus: AudioStatus;
++    /** Native ExoPlayer AudioTrack session ID */
++    audioSessionId?: number;
+     /**
+      * Start playing audio.
+      */
+--- a/node_modules/expo-audio/build/Audio.types.d.ts
++++ b/node_modules/expo-audio/build/Audio.types.d.ts
+@@ -189,6 +189,8 @@
+ export type AudioStatus = {
+     /** Unique identifier for the player instance. */
+     id: string;
++    /** Audio session ID of native ExoPlayer AudioTrack */
++    audioSessionId?: number;
+     /** Current playback position in seconds. */
+     currentTime: number;
+     /** String representation of the player's internal playback state. */

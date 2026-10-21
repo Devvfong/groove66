@@ -43,3 +43,4 @@ Use fictional sample songs or content with verified usage rights. Don't scrape o
 ## Delivery standard
 
 On a 360 dp and 393 dp portrait Android screen, the four primary screens must be immediately recognizable as the matching phones in the reference image. Functionality must not degrade visual fidelity; if a detail is unclear, follow the image and the written UX contract before inventing a redesign.
+# groove66
